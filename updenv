@@ -7,24 +7,26 @@ if [ $# == 0 ];then
     echo "all ------update the glsysconfig dir and the leetcode dir"
     echo "let ------update the leetcode dir"
     echo "sys ------update the glsysconfig dir"
-    echo "fir ------append \"~/.glsysconfig to .bashrc file"
+    echo "fir ------append .glsysconfig leetcode/.config gitpro to .bashrc file"
 #lc for leetcode
 elif [ $1 == "all" ];then
     echo "update the glsysconfig dir and the leetcode dir"
-    cp ./.glsysconfig ../ -r
-    cp ./leetcode ../ -r
+    cp ./.glsysconfig ~/ -r
+    cp ./leetcode ~/ -r
 elif [ $1 == "let" ];then
     echo "update the leetcode dir"
-    cp ./leetcode ../ -r
+    cp ./leetcode ~/ -r
 #sys for glsysconfig
 elif [ $1 == "sys" ];then
     echo "update the glsysconfig dir"
-    cp ./.glsysconfig ../ -r
+    cp ./.glsysconfig ~/ -r
 elif [ $1 == "fir" ];then
     echo "config the env for the first time"
-    cp ./.glsysconfig ../ -r
-    cp ./leetcode ../ -r
-    echo "PATH=$PATH:~/.glsysconfig" ../.bashrc
+    cp ./.glsysconfig ~/ -r
+    cp ./leetcode ~/ -r
+    echo "PATH=$PATH:~/.glsysconfig" >> ~/.bashrc
+    echo "PATH=$PATH:~/gitpro/" >> ~/.bashrc
+    echo "PATH=$PATH:~/leetcode/.config" >> ~/.bashrc
 else
     echo "no option, please select available option"
 fi
