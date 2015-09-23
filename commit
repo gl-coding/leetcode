@@ -2,4 +2,4 @@
 
 log=$1
 
-git commit -m $log
+git commit -m "$log"
