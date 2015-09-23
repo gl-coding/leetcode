@@ -1,0 +1,4 @@
+#!/bin/bash
+
+#export http_proxy=http://proxy-server:port
+echo "export http_proxy=http://proxy-server:port"

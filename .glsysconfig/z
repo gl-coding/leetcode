@@ -1,0 +1,21 @@
+#!/bin/bash
+
+#back up all gl config files
+
+mkdir ~/config
+if [ -f ".glconfig.zip" ];then
+    rm ~/.glconfig.zip
+fi
+
+cp ~/.vimrc  ~/config/
+cp ~/.vim    ~/config/ -r
+cp ~/.glsysconfig   ~/config/ -r
+cp ~/leetcode   ~/config/ -r
+
+zip ~/.glconfig.zip ~/config -r > log
+
+rm log
+
+rm ~/config -r
+
+echo "finished and rename the zip to . file"
