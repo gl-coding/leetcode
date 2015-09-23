@@ -24,9 +24,9 @@ elif [ $1 == "fir" ];then
     echo "config the env for the first time"
     cp ./.glsysconfig ~/ -r
     cp ./leetcode ~/ -r
-    echo "export PATH=\$PATH:~/.glsysconfig" >> ~/.bashrc
-    echo "export PATH=\$PATH:~/gitpro/" >> ~/.bashrc
-    echo "export PATH=\$PATH:~/leetcode/.config" >> ~/.bashrc
+    echo "PATH=$PATH:~/.glsysconfig" >> ~/.bashrc
+    echo "PATH=$PATH:~/gitpro/" >> ~/.bashrc
+    echo "PATH=$PATH:~/leetcode/.config" >> ~/.bashrc
 else
     echo "no option, please select available option"
 fi
