@@ -1,9 +1,0 @@
-#!/bin/bash
-
-echo "renaming the file $1......"
-mv ./test.cpp $1.cpp
-echo "move to finished folder......"
-mv $1.cpp ./finished/
-echo "copy model file to test.cpp"
-b
-echo "finished"
