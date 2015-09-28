@@ -1,6 +1,5 @@
 #!/bin/bash
 
-./clone
 ./add
-./commit
+./commit "$1"
 ./push
