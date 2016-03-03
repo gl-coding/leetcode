@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo "update the .glsysconfig dir..."
+cp ~/.glsysconfig ~/gitpro/ -r
+echo "update finished, you can git the project"

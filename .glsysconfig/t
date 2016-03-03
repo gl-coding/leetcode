@@ -12,7 +12,7 @@ if [ "$suffix" = "" ] || [ "$suffix" = "sh" ];then
     echo "#!/bin/bash" >> $name
 elif [ $suffix = "py" ];then
     echo "createa python file"
-    echo "#!/bin/python" >> $name
+    echo "#!/usr/bin/python" >> $name
 else
     echo "others"
 fi

@@ -13,17 +13,31 @@ elif [ $1 == "all" ];then
     echo "update the glsysconfig dir and the leetcode dir"
     cp ./.glsysconfig ~/ -r
     cp ./leetcode ~/ -r
+    echo "export PATH=\$PATH:~/.glsysconfig" >> ~/.bashrc
+    echo "export PATH=\$PATH:~/gitpro/" >> ~/.bashrc
+    echo "export PATH=\$PATH:~/leetcode/.config" >> ~/.bashrc
+
+    echo "configure the vim"
+    cp ./vim.zip ~/
+    cd ~/
+    unzip vim.zip
+    rm vim.zip
+
 elif [ $1 == "let" ];then
     echo "update the leetcode dir"
     cp ./leetcode ~/ -r
 #sys for glsysconfig
+elif [ $1 == "vim" ];then
+    echo "configure the vim"
+    cp ./vim.zip ~/
+    cd ~/
+    unzip vim.zip
+    rm vim.zip
 elif [ $1 == "sys" ];then
     echo "update the glsysconfig dir"
     cp ./.glsysconfig ~/ -r
 elif [ $1 == "fir" ];then
     echo "config the env for the first time"
-    cp ./.glsysconfig ~/ -r
-    cp ./leetcode ~/ -r
     echo "export PATH=\$PATH:~/.glsysconfig" >> ~/.bashrc
     echo "export PATH=\$PATH:~/gitpro/" >> ~/.bashrc
     echo "export PATH=\$PATH:~/leetcode/.config" >> ~/.bashrc
